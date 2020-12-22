@@ -1,0 +1,19 @@
+{
+  "name": "sumfilesnumbers",
+  "version": "1.0.0",
+  "description": "Sum Numbers from a file recursively ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xavi-99/SumFilesNumbers.git"
+  },
+  "author": "Xavi Navarro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xavi-99/SumFilesNumbers/issues"
+  },
+  "homepage": "https://github.com/xavi-99/SumFilesNumbers#readme"
+}
