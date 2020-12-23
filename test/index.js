@@ -1,4 +1,5 @@
-import { expect } from "chai";
+import expect from 'chai';
+import { sumFilesNumbers } from '..';
 
 
 describe('Sum Files Numbers', () => {

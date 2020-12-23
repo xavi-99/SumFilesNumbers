@@ -1,0 +1,7 @@
+2
+B.txt
+2
+C.txt
+1
+A.txt
+1
