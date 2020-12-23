@@ -1,0 +1,7 @@
+1
+textFiles/B.txt
+2
+textFiles/B.txt
+1
+textFiles/A.txt
+1
