@@ -6,13 +6,11 @@ import fs from "fs";
  * @return {string} File content.
  */
 function readFile(path) {
-  try {
-    return fs.readFileSync(path, "utf-8");
-  } catch (error) {
-    console.log(error);
+  if (!fs.existsSync(path)) {
+    throw new Error("Path or file does not exist");
   }
+  return fs.readFileSync(path, "utf-8");
 }
-
 
 /**
  * Return sum of all numbers inside a file and numbers inside embed files inside the original one
@@ -20,12 +18,12 @@ function readFile(path) {
  * @param {number} total - Total amount to be returned, by default is 0
  * @return {number} Total Sum numbers inside file and files
  */
-export function sumFilesNumbers(pathFile, total = 0) {
+export default function sumFilesNumbers(pathFile, total = 0) {
   let file = readFile(pathFile),
     fileContent = file.split("\n");
 
   return fileContent.reduce((acc, currentValue) => {
-    if (!currentValue) return;
+    if (!currentValue) return acc;
 
     if (isFinite(currentValue)) return (acc += parseInt(currentValue));
 
@@ -33,3 +31,9 @@ export function sumFilesNumbers(pathFile, total = 0) {
   }, total);
 }
 
+/**
+ * Demo logs to simulate this function
+ */
+// console.log(sumFilesNumbers('./textFiles/A.txt'))
+// console.log(sumFilesNumbers('./textFiles/B.txt'))
+// console.log(sumFilesNumbers('./textFiles/C.txt'))
